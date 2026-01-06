@@ -5,7 +5,10 @@ import io.github.cottonmc.cotton.gui.impl.LibGuiCommon;
 import net.minecraft.client.gl.ShaderProgram;
 import net.minecraft.client.render.VertexFormats;
 import net.minecraft.util.Identifier;
+import org.apache.logging.log4j.LogManager;
 import org.jetbrains.annotations.Nullable;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 
@@ -18,15 +21,15 @@ public final class LibGuiShaders {
 			// The tiled rectangle shader is used for performant tiled texture rendering.
             try {
                 sink.registerShader(
-					new ShaderProgram(
-						provider,
-						new Identifier(LibGuiCommon.MOD_ID, "tiled_rectangle").toString(),
-						VertexFormats.POSITION
-					), shader -> {
-						tiledRectangle = shader;
-					}
-				);
-
+                    new ShaderProgram(
+                        provider,
+                        "tiled_rectangle",
+                        VertexFormats.POSITION
+                    ), shader -> {
+                        tiledRectangle = shader;
+                    }
+                );
+				LoggerFactory.getLogger("LibGuiShaders").info("Successfully registered shader Program");
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
