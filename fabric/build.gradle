@@ -34,10 +34,10 @@ dependencies {
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionFabric')
 
-    modImplementation "io.github.cottonmc:Jankson-fabric:${project.jankson_version}"
-    api("io.github.juuxel:libninepatch:${project.libninepatch_version}")
+    modApi("io.github.cottonmc:Jankson-fabric:${project.jankson_version}")
+    modApi("io.github.juuxel:LibNinePatch-fabric:${project.libninepatch_version}")
     include "io.github.cottonmc:Jankson-fabric:${project.jankson_version}"
-    include "io.github.juuxel:libninepatch:${project.libninepatch_version}"
+    include "io.github.juuxel:LibNinePatch-fabric:${project.libninepatch_version}"
 }
 
 processResources {

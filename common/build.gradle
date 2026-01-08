@@ -10,6 +10,6 @@ dependencies {
 
     modImplementation "dev.architectury:architectury:$rootProject.architectury_api_version"
 
-    modImplementation "io.github.cottonmc:Jankson-common:${project.jankson_version}"
-    api("io.github.juuxel:libninepatch:${project.libninepatch_version}")
+    modApi("io.github.cottonmc:Jankson-common:${project.jankson_version}")
+    modApi("io.github.juuxel:LibNinePatch-common:${project.libninepatch_version}")
 }

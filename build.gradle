@@ -34,6 +34,7 @@ subprojects {
             url = uri(layout.buildDirectory.dir("C:\\codeGoofing\\Java\\MavenRepo")) // local Maven repo
             content {
                 includeGroup "io.github.cottonmc"
+                includeGroup "io.github.juuxel"
             }
         }
     }
